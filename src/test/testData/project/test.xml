@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <modules>
+        <module name="Awesome_Module">
+            <dependencies>
+                <module name="Other_Module"/>
+            </dependencies>
+        </module>
+        <module name="Other_Module">
+            <dependencies>
+                <module name="Origin_Module"/>
+            </dependencies>
+        </module>
+        <module name="Origin_Module"/>
+    </modules>
+</root>
