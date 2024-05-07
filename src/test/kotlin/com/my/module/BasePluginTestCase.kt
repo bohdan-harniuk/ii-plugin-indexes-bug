@@ -5,6 +5,7 @@
 
 package com.my.module
 
+import com.intellij.testFramework.IndexingTestUtil
 import com.my.module.indexing.IndexManagerTestFixture
 import com.intellij.testFramework.fixtures.BasePlatformTestCase
 
@@ -20,5 +21,6 @@ abstract class BasePluginTestCase : BasePlatformTestCase() {
         super.setUp()
         myFixture.copyDirectoryToProject("project", "project")
         IndexManagerTestFixture.reindex()
+        IndexingTestUtil.waitUntilIndexesAreReady(project)
     }
 }
