@@ -1,7 +1,7 @@
 import org.jetbrains.changelog.Changelog
 import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
-import org.jetbrains.intellij.platform.gradle.extensions.TestFrameworkType
+import org.jetbrains.intellij.platform.gradle.TestFrameworkType
 import org.jetbrains.intellij.platform.gradle.models.ProductRelease
 
 fun properties(key: String) = project.findProperty(key).toString()
@@ -12,8 +12,8 @@ plugins {
     `java-test-fixtures`
     `kotlin-dsl`
     id("org.jetbrains.kotlin.jvm") version "1.9.10"
-    id("org.jetbrains.intellij.platform") version "2.0.0-beta1"
-    id("org.jetbrains.intellij.platform.migration") version "2.0.0-beta1"
+    id("org.jetbrains.intellij.platform") version "2.0.0-beta6"
+    id("org.jetbrains.intellij.platform.migration") version "2.0.0-beta6"
     kotlin("plugin.serialization") version embeddedKotlinVersion
     alias(libs.plugins.changelog)
 }
